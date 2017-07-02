@@ -1,2 +1,2 @@
 # jerseytest
-jersey rest api practise
+jersey rest api practise.
