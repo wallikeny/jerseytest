@@ -5,7 +5,9 @@ import io.swagger.annotations.*;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by xiaogang on 2017/6/28.
@@ -81,7 +83,7 @@ public class StudentResource {
         if (!student.valid()) {
             return "{}";
         }
-        String id = UUID.randomUUID().toString();
+        String id = CommonUtils.genUUID();
         student.setId(id);
         StudentCache.add(student);
         return JSON.toJSONString(student.toMapObject());
